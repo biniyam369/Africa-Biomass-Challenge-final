@@ -21,7 +21,12 @@ random.seed(params["seed"])
 
 input = sys.argv[1]
 output_train = os.path.join("data", "prepared", "train.tsv")
+output_test = os.path.join("data", "prepared", "valid.tsv")
 output_test = os.path.join("data", "prepared", "test.tsv")
+
+trainset = h5py.File("09072022_1154_train.h5", "r")
+validateset = h5py.File("09072022_1154_val.h5", "r")
+testset = h5py.File("09072022_1154_test.h5", "r")
 
 
 def process_posts(fd_in, fd_out_train, fd_out_test, target_tag):
