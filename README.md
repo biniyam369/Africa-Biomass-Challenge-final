@@ -1,11 +1,15 @@
-Africa-Biomass-Challenge-final
+
+## Africa-Biomass-Challenge-final
 In this challenge, your objective is to predict biomass in shaded regions in Cote d’Ivoire based on GEDI, Sentinel-2 and ground truth biomass data.
 
-Installation
+### Installation
 Python 3.7+ is required to run code from this repo.
 
+``` 
 $ git clone https://github.com/biniyam369/Africa-Biomass-Challenge-final.git
 $ cd example-get-started
+```
+{:.language-ruby}
 Now let's install the requirements. But before we do that, we strongly recommend creating a virtual environment with a tool such as virtualenv:
 
 $ virtualenv -p python3 .venv
@@ -15,11 +19,17 @@ This instruction assumes that DVC is already installed, as it is frequently used
 
 This DVC project comes with a preconfigured DVC remote storage that holds raw data (input), intermediate, and final results that are produced. This is a read-only HTTP remote.
 
-$ dvc remote list
+```
+dvc remote list
+```
+{:.language-ruby}
+
 storage https://remote.dvc.org/get-started
 You can run dvc pull to download the data:
-
+```
 $ dvc pull
+```
+{:.language-ruby}
 Running in your environment
 Run dvc repro to reproduce the pipeline:
 
