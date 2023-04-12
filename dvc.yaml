@@ -1,0 +1,8 @@
+stages:
+  download_file:
+    cmd: wget https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5 -O
+      ./data/09072022_1154_train.h5
+    deps:
+    - https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5
+    outs:
+    - ./data/09072022_1154_train.h5
