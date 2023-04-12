@@ -1,8 +1,18 @@
 stages:
-  download_file:
-    cmd: wget https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5 -O
-      ./data/09072022_1154_train.h5
-    deps:
-    - https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5
-    outs:
-    - ./data/09072022_1154_train.h5
+    download_file:
+        foreach:
+            train:
+                input_url: ${base.train_url}
+                output_url: ${base.data_dir}/raw-train.h5
+            valid:
+                input_url: ${base.valid_url}
+                output_url: ${base.data_dir}/raw-valid.h5
+            test:
+                input_url: ${base.test_url}
+                output_url: ${base.data_dir}/raw-test.h5
+        do:
+            cmd: wget "${item.input_url}" -o "${item.output_url}" 
+            params:
+                - base
+            outs:
+                - ${item.output_url}
