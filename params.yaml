@@ -1,20 +1,20 @@
-data:
-    data_dir: ./data
 
-download:
+base:
     train_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5
     valid_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_val.h5
     test_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_test.h5
+            
+    data_dir: ./data
             
 prepare:
     split: 0.20
     seed: 369
 
 featurize:
-  max_features: 200
-  ngrams: 2
+    max_features: 200
+    ngrams: 2
 
 train:
-  seed: 369
-  n_est: 50
-  min_split: 0.01
+    seed: 369
+    n_est: 50
+    min_split: 0.01
