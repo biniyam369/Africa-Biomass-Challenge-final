@@ -2,43 +2,43 @@ schema: '2.0'
 stages:
   download_file@valid:
     cmd: wget "https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_val.h5" -o
-      "./data/raw-valid.h5"
+      data/09072022_1154_val.h5
     params:
       params.yaml:
         base:
           train_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5
           valid_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_val.h5
           test_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_test.h5
-          data_dir: ./data
+          data_dir: data
     outs:
-    - path: ./data/raw-valid.h5
-      md5: 324deb88fddc189554e2a912fc34593e
+    - path: data/09072022_1154_val.h5
+      md5: 77a4175ed8a84638fdafdbb38624ee20
       size: 59296
   download_file@train:
     cmd: wget "https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5"
-      -o "./data/raw-train.h5"
+      -o data/09072022_1154_train.h5
     params:
       params.yaml:
         base:
           train_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5
           valid_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_val.h5
           test_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_test.h5
-          data_dir: ./data
+          data_dir: data
     outs:
-    - path: ./data/raw-train.h5
-      md5: eee5e5f169c83904b02d5d4200d74478
-      size: 284984
+    - path: data/09072022_1154_train.h5
+      md5: c7c5ba48900e544538cd13622ef17b18
+      size: 284982
   download_file@test:
     cmd: wget "https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_test.h5"
-      -o "./data/raw-test.h5"
+      -o data/09072022_1154_test.h5
     params:
       params.yaml:
         base:
           train_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5
           valid_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_val.h5
           test_url: https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_test.h5
-          data_dir: ./data
+          data_dir: data
     outs:
-    - path: ./data/raw-test.h5
-      md5: 399351ef17dce189bf92b53fb5d6a0d3
-      size: 59451
+    - path: data/09072022_1154_test.h5
+      md5: 7147495e016761043fb2f37d94961901
+      size: 59450

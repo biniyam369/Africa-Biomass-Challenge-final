@@ -3,15 +3,15 @@ stages:
         foreach:
             train:
                 input_url: ${base.train_url}
-                output_url: ${base.data_dir}/raw-train.h5
+                output_url: ${base.data_dir}/09072022_1154_train.h5
             valid:
                 input_url: ${base.valid_url}
-                output_url: ${base.data_dir}/raw-valid.h5
+                output_url: ${base.data_dir}/09072022_1154_val.h5
             test:
                 input_url: ${base.test_url}
-                output_url: ${base.data_dir}/raw-test.h5
+                output_url: ${base.data_dir}/09072022_1154_test.h5
         do:
-            cmd: wget "${item.input_url}" -o "${item.output_url}" 
+            cmd: wget "${item.input_url}" -o ${item.output_url}
             params:
                 - base
             outs:
