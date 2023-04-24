@@ -12,8 +12,8 @@ stages:
           data_dir: data
     outs:
     - path: data/09072022_1154_val.h5
-      md5: 1ace4856ef93aee9597f5f4f94899cea
-      size: 59349
+      md5: 14742723c1cbe37941160737e6985da0
+      size: 59447
   download_file@train:
     cmd: wget "https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_train.h5"
       -o data/09072022_1154_train.h5
@@ -26,8 +26,8 @@ stages:
           data_dir: data
     outs:
     - path: data/09072022_1154_train.h5
-      md5: ea8578ebb8b2e15e7354d13288af79b6
-      size: 285550
+      md5: 6ec73a596f61dadc0fdbe902286ef073
+      size: 286972
   download_file@test:
     cmd: wget "https://share.phys.ethz.ch/~pf/albecker/abc/09072022_1154_test.h5"
       -o data/09072022_1154_test.h5
@@ -40,5 +40,5 @@ stages:
           data_dir: data
     outs:
     - path: data/09072022_1154_test.h5
-      md5: 007660b670e4f373159ac08f811d96df
-      size: 59505
+      md5: 1ded66b01fb22aaac6e855b550b5a1e3
+      size: 59598
